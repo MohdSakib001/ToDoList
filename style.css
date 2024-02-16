@@ -124,7 +124,7 @@ body {
     padding: 5px;
 }
 
-.btn-grp img:hover {
+.btn-grp img:active {
     background-color: hsl(228, 14%, 80%);
     border-radius: 50%;
 }
