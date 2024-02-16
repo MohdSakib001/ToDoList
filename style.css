@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(280deg, hsl(214, 52%, 62%), hsl(256, 74%, 42%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.app {
+    width: 450px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.heading {
+    display: flex;
+    gap: 10px;
+    color: hsl(261, 100%, 44%);
+    margin: 10px 0px;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading h3,
+.heading img {
+    cursor: pointer;
+}
+
+.inputTask {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    position: relative;
+}
+
+.inputTask input[type="text"] {
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    background-color: hsl(228, 14%, 93%);
+}
+
+.inputTask input[type="text"]:focus {
+    outline: none;
+}
+
+.inputTask input[type="button"] {
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    right: 0px;
+    color: #fff;
+    background-color: hsl(15, 79%, 56%);
+    cursor: pointer;
+}
+
+.inputTask input[type="button"]:hover {
+    background-color: hsl(15, 79%, 60%);
+}
+
+.inputTask input[type="button"]:active {
+    background-color: hsl(15, 79%, 46%);
+}
+
+.taskList {
+    margin: 20px 0px;
+    max-height: 350px;
+    overflow: scroll;
+}
+
+.taskList ul li {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.task .label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task .label::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(228, 14%, 90%);
+    border: 1px solid black;
+    background-size: cover;
+    padding: 5px;
+}
+
+.task div {
+    text-align: justify;
+    margin: 0px;
+}
+
+.taskList li input[type="checkbox"] {
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.btn-grp img {
+    padding: 5px;
+}
+
+.btn-grp img:hover {
+    background-color: hsl(228, 14%, 80%);
+    border-radius: 50%;
+}
+
+.checked::before {
+    background: url('https://www.shutterstock.com/image-vector/green-check-mark-icon-tick-600nw-522874111.jpg');
+}
+
+.checked {
+    color: green;
+}
+
+.cancel {
+    color: red;
+    text-decoration: line-through;
+}
