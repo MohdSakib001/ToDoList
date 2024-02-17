@@ -17,7 +17,8 @@ addTask.addEventListener("click", () => {
                             <div class="btn-grp">
                                 <img src="cancle.svg" alt="cancle button" id="cancel-btn">
                                 <img src="delete.svg" alt="delete icon" id="delete-btn">
-                            </div>`;
+                            </div>
+                            <hr>`;
 
         taskList.appendChild(newTask);
         inputTask.value = "";
@@ -29,7 +30,6 @@ addTask.addEventListener("click", () => {
 
 function saveData() {
     localStorage.setItem("data", taskList.innerHTML);
-    console.log(localStorage.getItem("data"));
 }
 
 function showData() {
