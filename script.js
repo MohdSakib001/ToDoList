@@ -60,6 +60,7 @@ function eventlistners() {
         // Event listener for delete button
         task.querySelector(".btn-grp #delete-btn").addEventListener("click", () => {
             task.style.display = "none";
+            task.nextSibling.style.display = "none";
             saveData();
         });
     });
