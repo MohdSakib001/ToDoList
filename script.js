@@ -9,9 +9,8 @@ addTask.addEventListener("click", () => {
 
         const newTask = document.createElement("li");
         newTask.innerHTML = `<div class="task">
-                                
                                 <div class="label">
-                                    <h4>${inputTaskValue}</h4>
+                                    <h3>${inputTaskValue}</h3>
                                 </div>
                             </div>
                             <div class="btn-grp">
@@ -24,7 +23,7 @@ addTask.addEventListener("click", () => {
         inputTask.value = "";
         saveData();
         eventlistners();
-        
+
     }
 });
 
@@ -35,7 +34,6 @@ function saveData() {
 function showData() {
     taskList.innerHTML = localStorage.getItem("data");
     eventlistners();
-
 }
 
 function eventlistners() {
