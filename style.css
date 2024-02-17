@@ -91,6 +91,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .task .label {
@@ -117,6 +118,7 @@ body {
     background-size: cover;
     padding: 5px;
     cursor: pointer;
+    transform: translate(0%, 25%);
 }
 
 .task div {
