@@ -4,11 +4,12 @@ const taskList = document.querySelector(".app .taskList ul");
 
 addTask.addEventListener("click", () => {
     if (inputTask.value !== "") {
-
         const inputTaskValue = inputTask.value;
-
+        const hr = document.createElement("hr");
         const newTask = document.createElement("li");
+        
         newTask.innerHTML = `<div class="task">
+                                
                                 <div class="label">
                                     <h3>${inputTaskValue}</h3>
                                 </div>
@@ -17,9 +18,10 @@ addTask.addEventListener("click", () => {
                                 <img src="cancle.svg" alt="cancle button" id="cancel-btn">
                                 <img src="delete.svg" alt="delete icon" id="delete-btn">
                             </div>
-                            <hr>`;
+                            `;
 
         taskList.appendChild(newTask);
+        taskList.appendChild(hr);
         inputTask.value = "";
         saveData();
         eventlistners();
@@ -34,6 +36,7 @@ function saveData() {
 function showData() {
     taskList.innerHTML = localStorage.getItem("data");
     eventlistners();
+
 }
 
 function eventlistners() {
